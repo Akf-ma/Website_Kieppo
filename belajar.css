@@ -1,0 +1,332 @@
+/* Reset dan base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #2c3e50;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.namanavbar {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #34495e;
+}
+
+.tombol {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Profile Section */
+.gambar1 {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.fotoku {
+    border-radius: 50%;
+    border: 5px solid #2c3e50;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.fotoku:hover {
+    transform: scale(1.05);
+}
+
+.namagw {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.namagw h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* About Me Section */
+.aboutme {
+    background-color: white;
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.aboutme h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.penjelasan {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* My Project Section */
+.ka1ku {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.ka1ku h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.project {
+    background-color: white;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project img {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.project p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Contact Me Section */
+.contact {
+    background-color: white;
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.contact h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.labelcontact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.labelcontact label {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.labelcontact input,
+.labelcontact textarea {
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    width: 100%;
+}
+
+.labelcontact input:focus,
+.labelcontact textarea:focus {
+    outline: none;
+    border-color: #2c3e50;
+}
+
+.labelcontact textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #34495e;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer strong {
+    color: #ecf0f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #2c3e50;
+        padding: 1rem;
+    }
+    
+    .menu.active {
+        display: flex;
+    }
+    
+    .tombol {
+        display: block;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .aboutme,
+    .project,
+    .contact {
+        margin: 1rem;
+        padding: 2rem 1rem;
+    }
+    
+    .fotoku {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .namagw h2,
+    .aboutme h2,
+    .ka1ku h2,
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+    
+    .namanavbar {
+        font-size: 1.2rem;
+    }
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  background: #fafafa;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+th {
+  background: #4a90e2;
+  color: #fff;
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+}
+
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background: #f2f6fc;
+}
+
+tr:hover {
+  background: #e8f0fe;
+  transition: background 0.3s;
+}
+
+.menu{list-style:none;display:flex;gap:12px;margin:0;padding:0}
+    .menu a{display:inline-block;padding:8px 12px;border-radius:8px;text-decoration:none;color:#111}
+    .tombol{display:none;cursor:pointer;padding:8px;border-radius:8px}
+    .tombol .bar{display:block;width:22px;height:2px;background:#111;margin:4px 0;transition:all .2s}
+    @media (max-width:800px){
+      .menu{position:absolute;right:16px;top:64px;flex-direction:column;background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 20px rgba(2,6,23,0.08);display:none;min-width:160px}
+      .menu.show{display:flex}
+      .tombol{display:block}
+    }
+    .ig-btn{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;border:1px solid rgba(2,6,23,0.06);text-decoration:none}
+    table{border-collapse:collapse;width:100%;margin-top:20px}
+    table,th,td{border:1px solid #333}
+    th,td{padding:8px;text-align:left}

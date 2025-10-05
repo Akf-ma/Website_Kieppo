@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="belajar.css">
+ 
+</head>
+<body>
+    <div>
+        <nav class="navbar">
+            <div class="container">
+                <a class="namanavbar">Akief Maulana Aulia</a>
+                <ul class="menu" id="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Tentang</a></li>
+                    <li><a href="#">Produk</a></li>
+                    <li><a href="#">Layanan</a></li>
+                    <li><a href="kontakkami.html">Kontak Kami</a></li>
+                    <li><a href="#" id="igLink" class="ig-btn" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                </ul>
+                <div class="tombol" id="burger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    
+        <br>
+        <br>
+
+         <div class="gambar1">
+            <img src="boerder.jpg"alt="" height="200px" width="200px" class="fotoku">
+         </div>
+         <div class="namagw">
+            <h2>Akief Maulana Aulia</h2>
+         </div>
+    </div>
+
+        <br>
+        <br>
+
+         <div class="aboutme">
+            <h2>About Me</h2>
+            <p class="penjelasan">Hai, kenalin gw akief, gw adalah mahasiswa s1 ilmu komputer di univesitas sumatera utara</p>
+         </div>
+
+        <br>
+        <br>
+
+         <div class="ka1ku">
+            <h2>My Project</h2>
+            <div class="project">
+                <img src="kalku.png" alt="" height="150">
+                <p>Pada Saat semester 1, gwehj bersama temen gwehj mendapat tugas proyek yaitu membuat aplikasi sederhana menggunakan lazarus, dimana lazarus ini adalah bahasa yang mirip pascal.</p>
+                <p>Nah, karena kami berdua belum cukup ahli, maka proyek yang kami buat adalah kalkulator swederhana, dimana seperti yang kalian lihat, dia mempunyai tombol tombol kalkulator dasar, dan aplikasi ini berfungsi lho. (Setidaknya dulu begitu)</p>
+            </div>
+              <div>
+                <img src="pert1.png" alt="" height="100">
+                <p>Aku Adalah Mimpi Buruk Bagi Musuh Musuhku</p>
+            </div>
+         </div>
+
+                   <div>
+            <h2>Jadwal</h2>
+            <table>
+              <tr>
+                <th>Hari</th>
+                <th>Mata Kuliah</th>
+                <th>Waktu</th>
+              </tr>
+              <tr>
+                <td>Senin</td>
+                <td>Praktek Musik Nusantara</td>
+                <td>10.30 - 12.10</td>
+              </tr>
+              <tr>
+                <td>Senin</td>
+                <td>Semiotik</td>
+                <td>15.00 - 16.40</td>
+              </tr>
+              <tr>
+                <td>Selasa</td>
+                <td>Praktikum Pemweb</td>
+                <td>13.50 - 16.30</td>
+              </tr>
+              <tr>
+                <td>Rabu</td>
+                <td>Struktur Data</td>
+                <td>08.00 - 10.30</td>
+              </tr>
+              <tr>
+                <td>Rabu</td>
+                <td>Kecerdasan Buatan</td>
+                <td>10.30 - 12.10</td>
+              </tr>
+              <tr>
+                <td>Rabu</td>
+                <td>Pemweb</td>
+                <td>14.40 - 17.10</td>
+              </tr>
+              <tr>
+                <td>Kamis</td>
+                <td>Praktikum Basis Data</td>
+                <td>08.00 - 09.40</td>
+              </tr>
+              <tr>
+                <td>Jumat</td>
+                <td>Basis Data</td>
+                <td>08.00 - 10.30</td>
+              </tr>
+              <tr>
+                <td>Jumat</td>
+                <td>Wirausaha Digital</td>
+                <td>10.30 - 12.10</td>
+              </tr>
+              <tr>
+                <td>Jumat</td>
+                <td>Praktikum Struktur Data</td>
+                <td>14.40 - 17.10</td>
+              </tr>
+            </table>
+          </div>
+
+         <div class="contact">
+            <h2>Contact Me</h2>
+            <form action="">
+                <div class="labelcontact">
+                <label for="">nama</label> 
+                <br>
+                <input type="text">
+                <br>
+                <label for="">Email</label> 
+                <br>
+                <input type="Email">
+                <br>
+                <label for="">Pesan</label> 
+                <br>
+                <input type="text">
+                <br>
+                <textarea name="" id=""></textarea>
+                <br>
+                <button>Kirim Pesan</button>
+                </div>
+            </form>
+         </div>
+
+
+
+          <div>
+            <p>Dibuat Oleh <strong>Gwehj</strong></p>
+          </div>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('menu');
+    burger.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('show');
+      burger.setAttribute('aria-expanded', isOpen);
+      burger.classList.toggle('open');
+    });
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .tombol.open .bar:nth-child(1){ transform: translateY(6px) rotate(45deg); }
+      .tombol.open .bar:nth-child(2){ opacity: 0; transform: scaleX(0); }
+      .tombol.open .bar:nth-child(3){ transform: translateY(-6px) rotate(-45deg); }
+    `;
+    document.head.appendChild(style);
+    const IG_URL = 'https://instagram.com/akiefmaulana3321';
+    document.getElementById('igLink').href = IG_URL;
+  </script>
+</body>
+</html>
